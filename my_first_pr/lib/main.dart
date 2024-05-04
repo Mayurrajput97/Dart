@@ -42,16 +42,29 @@ class HomePage extends StatelessWidget {
 
       // Buttons  :>>>>>>>>>>>>>>>>>>>>
 
+      // body: Center(
+      //     child: ElevatedButton(
+      //   onPressed: () {
+      //     print('You Clicked me ');
+      //   },
+      //   style: ElevatedButton.styleFrom(
+      //     backgroundColor: Colors.blue,
+      //   ),
+      //   child: Text('Its Centra!'),
+      // )),
+
+      // Icons Inside Buttons :
+
       body: Center(
-          child: ElevatedButton(
-        onPressed: () {
-          print('You Clicked me ');
-        },
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue,
+        child: ElevatedButton.icon(
+          onPressed: () {},
+          icon: Icon(Icons.mail),
+          label: Text('Mail Here'),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 248, 61, 28),
+          ),
         ),
-        child: Text('Its Centra!'),
-      )),
+      ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
