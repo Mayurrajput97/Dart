@@ -16,56 +16,20 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
 
-      // NetWork Image :>>>>>>>>>>>>>>>>>>>>
+      // Container & Padding :>>>>>>>>>>
 
-      // body: const Center(
-      //   child: Image(
-      //     image: NetworkImage(
-      //         'https://images.unsplash.com/photo-1595147389795-37094173bfd8?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
-      //   ),
-      // ),
-
-      // Assets Image :>>>>>>>>>>>>>>>>>>>>
-
-      // body: Center(
-      //   child: Image.asset('assets/giyu.jpg'),
-      // ),
-
-      // Icons :>>>>>>>>>>>>>>>
-
-      // body: Center(
-      //     child: Icon(
-      //   Icons.facebook,
-      //   color: Colors.blue,
-      //   size: 50.0,
-      // )),
-
-      // Buttons  :>>>>>>>>>>>>>>>>>>>>
-
-      // body: Center(
-      //     child: ElevatedButton(
-      //   onPressed: () {
-      //     print('You Clicked me ');
-      //   },
-      //   style: ElevatedButton.styleFrom(
-      //     backgroundColor: Colors.blue,
-      //   ),
-      //   child: Text('Its Centra!'),
-      // )),
-
-      // Icons Inside Buttons :
-
-      body: Center(
-        child: ElevatedButton.icon(
-          onPressed: () {},
-          icon: Icon(Icons.mail),
-          label: Text('Mail Here'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 248, 61, 28),
-          ),
-        ),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(20.0, 30.0, 25.0, 50.0),
+        margin: EdgeInsets.all(50.0),
+        color: Colors.blueGrey,
+        child: Text('Hello'),
       ),
 
+      // Padding Widget :>>>>>>>>>>>>>
+      // body: Padding(
+      //   padding: EdgeInsets.all(40.0),
+      //   child: Text('Hello Centra!'),
+      // )
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Text('Click It!'),
