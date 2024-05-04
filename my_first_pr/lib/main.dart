@@ -18,11 +18,25 @@ class HomePage extends StatelessWidget {
 
       // Container & Padding :>>>>>>>>>>
 
-      body: Container(
-        padding: EdgeInsets.fromLTRB(20.0, 30.0, 25.0, 50.0),
-        margin: EdgeInsets.all(50.0),
-        color: Colors.blueGrey,
-        child: Text('Hello'),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('hello, world'),
+          TextButton(
+            onPressed: () {},
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.amber),
+            ),
+            child: Text('click me'),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            // margin: EdgeInsets.all(60.0),
+            child: Text('Iam in container'),
+          ),
+        ],
       ),
 
       // Padding Widget :>>>>>>>>>>>>>
@@ -30,11 +44,11 @@ class HomePage extends StatelessWidget {
       //   padding: EdgeInsets.all(40.0),
       //   child: Text('Hello Centra!'),
       // )
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Text('Click It!'),
-        backgroundColor: Color.fromARGB(255, 242, 79, 9),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   child: const Text('Click It!'),
+      //   backgroundColor: Color.fromARGB(255, 242, 79, 9),
+      // ),
     );
   }
 }
