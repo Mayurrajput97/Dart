@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,26 +18,37 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
 
-        //  Rows Widget :>>>>>>>>>>
+        //  Expanded Widget :>>>>>>>>>>
 
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        body: Row(
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.cyan,
-              child: Text('Container one'),
+            Expanded(
+              child: Image.asset('assets/giyu.jpg'),
+              flex: 2,
             ),
-            Container(
-              padding: EdgeInsets.all(40.0),
-              color: Color.fromARGB(255, 233, 32, 9),
-              child: Text('Container Two'),
+            Expanded(
+              flex: 3,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child: Text('one'),
+              ),
             ),
-            Container(
-              padding: EdgeInsets.all(50.0),
-              color: Color.fromARGB(255, 165, 5, 239),
-              child: Text('Container Three'),
+            Expanded(
+              flex: 2,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Color.fromARGB(255, 233, 32, 9),
+                child: Text('Two'),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Color.fromARGB(255, 165, 5, 239),
+                child: Text('Three'),
+              ),
             ),
           ],
         ));
