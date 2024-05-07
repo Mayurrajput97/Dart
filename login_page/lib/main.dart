@@ -22,11 +22,12 @@ class MyApp extends StatelessWidget {
                 Padding(padding: EdgeInsets.only(top: 30)),
                 SizedBox(
                   height: 50,
+                  width: 500,
                   child: TextField(
                     decoration: InputDecoration(
                       fillColor: Colors.grey,
                       hintText: 'Phone Number OR Username',
-                      hintStyle: TextStyle(fontSize: 18),
+                      hintStyle: TextStyle(fontSize: 15),
                       contentPadding: EdgeInsets.all(8.0),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
@@ -39,11 +40,12 @@ class MyApp extends StatelessWidget {
                 SizedBox(height: 20),
                 SizedBox(
                   height: 50,
+                  width: 500,
                   child: TextField(
                     decoration: InputDecoration(
                       fillColor: Colors.grey,
-                      hintText: 'Password ',
-                      hintStyle: TextStyle(fontSize: 18),
+                      hintText: 'Enter Password ',
+                      hintStyle: TextStyle(fontSize: 15),
                       contentPadding: EdgeInsets.all(8.0),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
@@ -87,6 +89,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 20),
               ],
             ),
           ),
