@@ -96,6 +96,25 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'images/micro.png',
+                      width: 80,
+                    ),
+                    Image.asset(
+                      'images/playstore.png',
+                      width: 80,
+                    ),
+                    SizedBox(width: 20),
+                  ],
+                ),
+                Text(
+                  'Get App',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.blue),
+                ),
               ],
             ),
           ),
