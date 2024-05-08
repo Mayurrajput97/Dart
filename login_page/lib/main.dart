@@ -18,16 +18,19 @@ class MyApp extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(30, 100, 30, 20),
             child: Column(
               children: [
-                Image.asset("Images/Insta.jpg", width: 90),
+                Image.asset(
+                  "Images/ig.png",
+                  width: 200,
+                ),
                 Padding(padding: EdgeInsets.only(top: 30)),
                 SizedBox(
-                  height: 50,
-                  width: 500,
+                  height: 45,
+                  width: 400,
                   child: TextField(
                     decoration: InputDecoration(
                       fillColor: Colors.grey,
                       hintText: 'Phone Number OR Username',
-                      hintStyle: TextStyle(fontSize: 15),
+                      hintStyle: TextStyle(fontSize: 14),
                       contentPadding: EdgeInsets.all(8.0),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
@@ -37,15 +40,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 SizedBox(
-                  height: 50,
-                  width: 500,
+                  height: 45,
+                  width: 400,
                   child: TextField(
                     decoration: InputDecoration(
                       fillColor: Colors.grey,
                       hintText: 'Enter Password ',
-                      hintStyle: TextStyle(fontSize: 15),
+                      hintStyle: TextStyle(fontSize: 14),
                       contentPadding: EdgeInsets.all(8.0),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
@@ -55,23 +58,26 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text('Forgot Pass?'),
-                  ),
-                ),
-                SizedBox(height: 40),
+                SizedBox(height: 30),
                 SizedBox(
-                  width: 200,
+                  width: 400,
                   height: 40,
                   child: ElevatedButton(
                       onPressed: () {},
                       child: Text(
                         'Log In',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       )),
+                ),
+                SizedBox(height: 30),
+                Align(
+                  alignment: Alignment.center,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text('Forgot Pass?'),
+                  ),
                 ),
                 SizedBox(height: 30),
                 Row(
