@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RegistrationPage extends StatelessWidget {
-  final GlobalKey<FormState> _RegiKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _regiKey = GlobalKey<FormState>();
 
   String? _validateName(String? value) {
     if (value == null || value.isEmpty) {
@@ -12,7 +12,7 @@ class RegistrationPage extends StatelessWidget {
 
   String? _validateEmail(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Please enter an email address';
+      return 'Please enter email address';
     }
     if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
       return 'Please enter a valid email address';
@@ -22,10 +22,10 @@ class RegistrationPage extends StatelessWidget {
 
   String? _validatePhone(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Please enter a phone number';
+      return 'Please enter  phone number';
     }
     if (!RegExp(r'^[0-9]{10}$').hasMatch(value)) {
-      return 'Please enter a valid 10-digit phone number';
+      return 'Please enter  valid  phone number';
     }
     return null;
   }
@@ -42,6 +42,7 @@ class RegistrationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Registration Page'),
+        backgroundColor: Colors.blue,
         centerTitle: true,
       ),
       body: Center(
@@ -56,7 +57,8 @@ class RegistrationPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Form(
-            key: _RegiKey,
+            key: _regiKey,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
@@ -82,10 +84,11 @@ class RegistrationPage extends StatelessWidget {
                 Center(
                   child: ElevatedButton(
                     onPressed: () {
-                      if (_RegiKey.currentState!.validate()) {
+                      if (_regiKey.currentState!.validate()) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Registration successful')),
                         );
+                        Navigator.pushNamed(context, '/home');
                       }
                     },
                     child: Text('Register'),
