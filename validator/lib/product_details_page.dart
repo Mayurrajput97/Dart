@@ -7,8 +7,6 @@ class ProductDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Fetch product details for the selected product
-    // For demonstration purposes, creating a dummy description
     String description = 'Long description of $productName';
 
     return Scaffold(
@@ -24,10 +22,8 @@ class ProductDetailsPage extends StatelessWidget {
               style: TextStyle(fontSize: 18),
             ),
             SizedBox(height: 20),
-            // Add multiple images here
-            Image.asset('assets/product_image.png', width: 200),
-            Image.asset('assets/product_image.png', width: 200),
-            // Add more images as needed
+            Image.asset('assets/mobiles.png', width: 200),
+            Image.asset('assets/laptop.png', width: 200),
           ],
         ),
       ),
