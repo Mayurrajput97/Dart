@@ -1,31 +1,49 @@
 import 'package:flutter/material.dart';
 
-class ProductDetailsPage extends StatelessWidget {
-  final String productName;
+class Product {
+  final String name;
+  final String image;
+  final String price;
+  final String camera;
+  final String ram;
+  final String rom;
 
-  ProductDetailsPage(this.productName);
+  Product({
+    required this.name,
+    required this.image,
+    required this.price,
+    required this.camera,
+    required this.ram,
+    required this.rom,
+  });
+}
+
+class ProductDetailsPage extends StatelessWidget {
+  final Product product;
+
+  ProductDetailsPage({required this.product});
 
   @override
   Widget build(BuildContext context) {
-    String description = 'Long description of $productName';
-
     return Scaffold(
       appBar: AppBar(
-        title: Text('Product Details - $productName'),
+        title: Text('Product Details - ${product.name}'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              description,
-              style: TextStyle(fontSize: 18),
-            ),
-            SizedBox(height: 20),
-            Image.asset('assets/mobiles.png', width: 200),
-            Image.asset('assets/laptop.png', width: 200),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.asset(
+            'assets/${product.image}',
+            height: 300,
+            width: 300,
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Name: ${product.name}\nPrice: ${product.price}\nCamera: ${product.camera}\nRAM: ${product.ram}\nROM: ${product.rom}',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }
