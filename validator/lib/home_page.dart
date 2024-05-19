@@ -1,127 +1,183 @@
 import 'package:flutter/material.dart';
 import 'product_details_page.dart';
+import 'product.dart';
 
 class HomePage extends StatelessWidget {
+  final List<Product> productList = [
+    Product(
+      name: 'Iphone 14',
+      image: 'assets/iphone13.png',
+      price: '999',
+      camera: '12MP',
+      ram: '6GB',
+      rom: '128GB',
+    ),
+    Product(
+      name: 'Iphone 14 plus',
+      image: 'assets/iphone15plus.png',
+      price: '799',
+      camera: '64MP',
+      ram: '8GB',
+      rom: '256GB',
+    ),
+    Product(
+      name: 'Iphone 15 plus',
+      image: 'assets/iphone15pro.png',
+      price: '899',
+      camera: '48MP',
+      ram: '12GB',
+      rom: '512GB',
+    ),
+    Product(
+      name: 'Iphone 15 pro',
+      image: 'assets/iphone14plus.png',
+      price: '899',
+      camera: '48MP',
+      ram: '12GB',
+      rom: '512GB',
+    ),
+    Product(
+      name: 'iphone SE',
+      image: 'assets/iphonese.png',
+      price: '899',
+      camera: '48MP',
+      ram: '12GB',
+      rom: '512GB',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    var productList = [
-      {
-        'name': 'Iphone 14',
-        'image': 'mobiles.png',
-        'price': '\$999',
-        'camera': '12 MP',
-        'ram': '6 GB',
-        'rom': '128 GB',
-      },
-      {
-        'name': 'Iphone SE',
-        'image': 'mobiles.png',
-        'price': '\$399',
-        'camera': '12 MP',
-        'ram': '3 GB',
-        'rom': '64 GB',
-      },
-      {
-        'name': 'Samsung Galaxy',
-        'image': 'samsung.jpg',
-        'price': '\$1099',
-        'camera': '108 MP',
-        'ram': '8 GB',
-        'rom': '256 GB',
-      },
-      {
-        'name': 'One Plus 7',
-        'image': 'oneplus.png',
-        'price': '\$599',
-        'camera': '48 MP',
-        'ram': '8 GB',
-        'rom': '128 GB',
-      },
-      {
-        'name': 'Asus ROG',
-        'image': 'asus.png',
-        'price': '\$899',
-        'camera': '64 MP',
-        'ram': '12 GB',
-        'rom': '256 GB',
-      },
-      {
-        'name': 'Asus ROG',
-        'image': 'asus.png',
-        'price': '\$899',
-        'camera': '64 MP',
-        'ram': '12 GB',
-        'rom': '256 GB',
-      },
-      {
-        'name': 'Asus ROG',
-        'image': 'asus.png',
-        'price': '\$899',
-        'camera': '64 MP',
-        'ram': '12 GB',
-        'rom': '256 GB',
-      },
-      {
-        'name': 'Asus ROG',
-        'image': 'asus.png',
-        'price': '\$899',
-        'camera': '64 MP',
-        'ram': '12 GB',
-        'rom': '256 GB',
-      },
-      {
-        'name': 'Asus ROG',
-        'image': 'asus.png',
-        'price': '\$899',
-        'camera': '64 MP',
-        'ram': '12 GB',
-        'rom': '256 GB',
-      },
-      {
-        'name': 'Asus ROG',
-        'image': 'asus.png',
-        'price': '\$899',
-        'camera': '64 MP',
-        'ram': '12 GB',
-        'rom': '256 GB',
-      },
-    ];
-
     return Scaffold(
       appBar: AppBar(
-        title: Text('Amazon Products'),
-        backgroundColor: Colors.blueAccent,
-        centerTitle: true,
+        title: Text('Shop Iphones'),
+        backgroundColor: Color.fromARGB(255, 169, 175, 181),
       ),
-      body: ListView.builder(
-        itemCount: productList.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage:
-                  AssetImage('assets/${productList[index]['image']}'),
+      body: Container(
+        color: Colors.grey[300],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Shop iPhone',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    'All models. Take Your Pick.',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            title: Text(productList[index]['name']!),
-            subtitle: Text('Price: ${productList[index]['price']}'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ProductDetailsPage(
-                    product: Product(
-                      name: productList[index]['name']!,
-                      image: productList[index]['image']!,
-                      price: productList[index]['price']!,
-                      camera: productList[index]['camera']!,
-                      ram: productList[index]['ram']!,
-                      rom: productList[index]['rom']!,
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: productList.length,
+                itemBuilder: (context, index) {
+                  final product = productList[index];
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ProductTile(product: product),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ProductTile extends StatelessWidget {
+  final Product product;
+
+  const ProductTile({required this.product});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProductDetailsPage(product: product),
+          ),
+        );
+      },
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.4,
+        padding: EdgeInsets.all(8),
+        child: Card(
+          elevation: 5,
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  product.name,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Center(
+                    child: Image.asset(
+                      product.image,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
-              );
-            },
-          );
-        },
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Prize : \$${product.price}',
+                      style: TextStyle(
+                        color: Colors.green,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: Text('Add To Cart'),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
