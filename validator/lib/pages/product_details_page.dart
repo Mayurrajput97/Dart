@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'product.dart';
+import 'package:provider/provider.dart';
+import 'package:validator/model/cart_model.dart';
+import 'package:validator/model/product.dart';
 
 class ProductDetailsPage extends StatelessWidget {
   final Product product;
@@ -46,7 +48,14 @@ class ProductDetailsPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Provider.of<CartModel>(context, listen: false)
+                              .add(product);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                                content: Text('${product.name} added to cart')),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.orange,
                           shape: RoundedRectangleBorder(

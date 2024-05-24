@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'product_details_page.dart';
-import 'product.dart';
+import 'package:validator/model/product.dart';
+
 
 class HomePage extends StatelessWidget {
   final List<Product> productList = [
@@ -52,6 +53,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Shop Iphones'),
         backgroundColor: Color.fromARGB(255, 169, 175, 181),
+        actions: [
+          IconButton(
+            padding: EdgeInsets.fromLTRB(0, 10, 30, 10),
+            iconSize: 40.0,
+            icon: Icon(Icons.shopping_cart),
+            onPressed: () {
+              Navigator.pushNamed(context, '/cart');
+            },
+          ),
+        ],
       ),
       body: Container(
         color: Colors.grey[300],
@@ -154,7 +165,7 @@ class ProductTile extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      'Prize : \$${product.price}',
+                      'Price: \$${product.price}',
                       style: TextStyle(
                         color: Colors.green,
                       ),
@@ -170,7 +181,7 @@ class ProductTile extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-                      child: Text('Add To Cart'),
+                      child: Text('Buy Now'),
                     ),
                   ],
                 ),
