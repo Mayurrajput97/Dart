@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:practice_work/widgets/header_section.dart';
-import 'package:practice_work/widgets/left_image_section.dart';
+import 'package:practice_work/authentication/widgets/header_section.dart';
+import 'package:practice_work/authentication/widgets/left_image_section.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
