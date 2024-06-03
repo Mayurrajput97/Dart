@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice_work/authentication/bloc/initial_page/initial_bloc.dart';
-import 'package:practice_work/authentication/pages/initial_page.dart';
-import 'package:practice_work/authentication/pages/login_page.dart';
-import 'package:practice_work/authentication/pages/sign_up_page.dart';
+import 'package:practice_work/features/authentication/presentation/bloc/initial/initial_bloc.dart';
+import 'package:practice_work/features/authentication/presentation/pages/initial_page.dart';
+import 'package:practice_work/features/authentication/presentation/pages/login_page.dart';
+import 'package:practice_work/features/authentication/presentation/pages/sign_up_page.dart';
+import 'package:practice_work/features/doctor/presentation/pages/docter_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,12 +20,14 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'SAPDOS',
-        initialRoute: '/',
+        initialRoute: '/docter',
         routes: {
           '/': (context) => InitialPage(),
           '/login': (context) => LoginPage(),
           '/signup': (context) => SignUpPage(),
+          '/docter': (context) => DoctorPage(),
         },
       ),
     );

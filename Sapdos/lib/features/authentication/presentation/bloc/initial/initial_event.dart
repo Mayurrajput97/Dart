@@ -1,3 +1,4 @@
+// initial_event.dart
 import 'package:equatable/equatable.dart';
 
 abstract class InitialEvent extends Equatable {

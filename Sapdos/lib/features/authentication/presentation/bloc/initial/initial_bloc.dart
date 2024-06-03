@@ -17,7 +17,5 @@ class InitialBloc extends Bloc<InitialEvent, InitialState> {
     on<ProceedAsGuest>((event, emit) {
       emit(ProceedAsGuestState());
     });
-
-    // TO - Do : Click here function have to add For API Calling
   }
 }
