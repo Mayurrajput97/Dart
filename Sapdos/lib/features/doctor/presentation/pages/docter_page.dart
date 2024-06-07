@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practice_work/features/doctor/presentation/widgets/appointment_card.dart';
 import 'package:practice_work/features/doctor/presentation/widgets/appointment_tiles.dart';
 import 'package:practice_work/features/doctor/presentation/widgets/custom_drawer.dart';
-import 'package:practice_work/theme/colors.dart';
+import 'package:practice_work/core/theme/colors.dart';
 
 class DoctorPage extends StatelessWidget {
   const DoctorPage({Key? key}) : super(key: key);

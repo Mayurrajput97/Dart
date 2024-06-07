@@ -6,7 +6,7 @@ import 'package:practice_work/features/patient/presentation/bloc/doctor_bloc.dar
 import 'package:practice_work/features/patient/presentation/bloc/doctor_event.dart';
 import 'package:practice_work/features/patient/presentation/bloc/doctor_state.dart';
 import 'package:practice_work/features/patient/presentation/widgets/doctor_tile.dart';
-import 'package:practice_work/theme/colors.dart';
+import 'package:practice_work/core/theme/colors.dart';
 
 class PatientPage extends StatelessWidget {
   @override

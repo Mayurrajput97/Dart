@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice_work/theme/colors.dart';
+import 'package:practice_work/core/theme/colors.dart';
 
 // --> This class is for handling the Appointment cards
 
