@@ -19,10 +19,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       emit(LoginLoadingState());
       await Future.delayed(const Duration(seconds: 4));
 
-      final bool isSuccess = event.emailValue == 'mayur@gmail.com' &&
-          event.passwordValue == 'mayur';
-      if (isSuccess) {
-        emit(LoginSuccessState());
+      if (event.emailValue == 'centra@gmail.com' &&
+          event.passwordValue == 'centra') {
+        emit(LoginSuccessState(role: 'doctor'));
+      } else if (event.emailValue == 'mayur@gmail.com' &&
+          event.passwordValue == 'mayur') {
+        emit(LoginSuccessState(role: 'patient'));
       } else {
         emit(const LoginErrorState("Invalid login credentials"));
       }

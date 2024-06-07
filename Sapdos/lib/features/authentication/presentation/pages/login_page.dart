@@ -29,7 +29,11 @@ class LoginPage extends StatelessWidget {
                   child: BlocListener<LoginBloc, LoginState>(
                     listener: (context, state) {
                       if (state is LoginSuccessState) {
-                        Navigator.pushNamed(context, '/simple');
+                        if (state.role == 'doctor') {
+                          Navigator.pushNamed(context, '/doctor');
+                        } else if (state.role == 'patient') {
+                          Navigator.pushNamed(context, '/patient');
+                        }
                       } else if (state is LoginErrorState) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text(state.errorMessage)),

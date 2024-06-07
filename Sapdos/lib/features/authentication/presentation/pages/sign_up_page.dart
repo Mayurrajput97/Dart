@@ -29,7 +29,7 @@ class SignUpPage extends StatelessWidget {
                 child: BlocListener<SignUpBloc, SignUpState>(
                   listener: (context, state) {
                     if (state is SignUpSuccessState) {
-                      Navigator.pushNamed(context, '/simple');
+                      Navigator.pushNamed(context, '/doctor');
                     } else if (state is SignUpErrorState) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text(state.errorMessage)),

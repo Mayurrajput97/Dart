@@ -5,6 +5,7 @@ import 'package:practice_work/features/authentication/presentation/pages/initial
 import 'package:practice_work/features/authentication/presentation/pages/login_page.dart';
 import 'package:practice_work/features/authentication/presentation/pages/sign_up_page.dart';
 import 'package:practice_work/features/doctor/presentation/pages/docter_page.dart';
+import 'package:practice_work/features/patient/presentation/pages/patient_home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,12 +23,13 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'SAPDOS',
-        initialRoute: '/docter',
+        initialRoute: '/',
         routes: {
-          '/': (context) => InitialPage(),
-          '/login': (context) => LoginPage(),
-          '/signup': (context) => SignUpPage(),
-          '/docter': (context) => DoctorPage(),
+          '/': (context) => const InitialPage(),
+          '/login': (context) => const LoginPage(),
+          '/signup': (context) => const SignUpPage(),
+          '/doctor': (context) => const DoctorPage(),
+          '/patient': (context) => PatientPage(),
         },
       ),
     );
