@@ -1,15 +1,16 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:email_validator/email_validator.dart';
-import 'login_event.dart';
-import 'login_state.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practice_work/features/authentication/presentation/bloc/login/login_event.dart';
+import 'package:practice_work/features/authentication/presentation/bloc/login/login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc() : super(LoginInitialState()) {
     on<LoginTextChangedEvent>((event, emit) {
-      if (!EmailValidator.validate(event.emailValue)) {
-        emit(const LoginErrorState("Please enter valid email address"));
-      } else if (event.passwordValue.isEmpty) {
-        emit(const LoginErrorState("Please enter password"));
+      if (!EmailValidator.validate(event.email)) {
+        emit(LoginErrorState(
+            errorMessage: "Please enter a valid email address"));
+      } else if (event.password.isEmpty) {
+        emit(LoginErrorState(errorMessage: "Please enter your password"));
       } else {
         emit(LoginValidState());
       }
@@ -19,14 +20,13 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       emit(LoginLoadingState());
       await Future.delayed(const Duration(seconds: 4));
 
-      if (event.emailValue == 'centra@gmail.com' &&
-          event.passwordValue == 'centra') {
-        emit(const LoginSuccessState(role: 'doctor'));
-      } else if (event.emailValue == 'mayur@gmail.com' &&
-          event.passwordValue == 'mayur') {
-        emit(const LoginSuccessState(role: 'patient'));
+      if (event.email == 'centra@gmail.com' && event.password == 'centra') {
+        emit(LoginSuccessState(role: 'doctor'));
+      } else if (event.email == 'mayur@gmail.com' &&
+          event.password == 'mayur') {
+        emit(LoginSuccessState(role: 'patient'));
       } else {
-        emit(const LoginErrorState("Invalid login credentials"));
+        emit(LoginErrorState(errorMessage: "Invalid login credentials"));
       }
     });
   }

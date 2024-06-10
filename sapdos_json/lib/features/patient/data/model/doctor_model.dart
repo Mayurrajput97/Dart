@@ -5,12 +5,18 @@ class Doctor {
   final String specialization;
   final double rating;
   final String image;
+  final String description;
+  final List<String> availableSlots;
+  final List<String> education;
 
   Doctor({
     required this.name,
     required this.specialization,
     required this.rating,
     required this.image,
+    required this.description,
+    required this.availableSlots,
+    required this.education,
   });
 
   factory Doctor.fromJson(Map<String, dynamic> json) {
@@ -19,6 +25,9 @@ class Doctor {
       specialization: json['specialization'],
       rating: json['rating'].toDouble(),
       image: json['image'],
+      description: json['description'],
+      availableSlots: List<String>.from(json['availableSlots']),
+      education: List<String>.from(json['education']),
     );
   }
 

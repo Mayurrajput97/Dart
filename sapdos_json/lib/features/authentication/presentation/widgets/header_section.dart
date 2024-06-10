@@ -14,32 +14,39 @@ class HeaderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    bool isSmallScreen = screenWidth < 600;
+
+    double titleFontSize = isSmallScreen ? 32 : 40;
+    double subtitleFontSize = isSmallScreen ? 18 : 24;
+    double descriptionFontSize = isSmallScreen ? 14 : 16;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           title,
-          style: const TextStyle(
-            fontSize: 40,
+          style: TextStyle(
+            fontSize: titleFontSize,
             fontWeight: FontWeight.bold,
-            color: Color.fromARGB(213, 4, 49, 116),
+            color: const Color.fromARGB(213, 4, 49, 116),
           ),
         ),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         Text(
           subtitle,
-          style: const TextStyle(
-            fontSize: 24,
+          style: TextStyle(
+            fontSize: subtitleFontSize,
             fontWeight: FontWeight.w500,
-            color: Color.fromARGB(255, 4, 48, 116),
+            color: const Color.fromARGB(255, 4, 48, 116),
           ),
         ),
-        const SizedBox(height: 6),
+        SizedBox(height: 6),
         Text(
           description,
-          style: const TextStyle(
-            fontSize: 16,
-            color: Color.fromARGB(161, 0, 0, 0),
+          style: TextStyle(
+            fontSize: descriptionFontSize,
+            color: const Color.fromARGB(161, 0, 0, 0),
           ),
         ),
       ],

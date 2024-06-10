@@ -1,8 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice_work/features/authentication/presentation/widgets/auth_navigation_link.dart';
+import 'package:go_router/go_router.dart';
 import 'package:practice_work/features/authentication/presentation/widgets/header_section.dart';
-import 'package:practice_work/features/authentication/presentation/widgets/left_image_section.dart';
+import 'package:practice_work/features/widgets_comman/left_image_section.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_bloc.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_event.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_state.dart';
@@ -14,6 +15,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
+
     return Scaffold(
       body: Row(
         children: [
@@ -29,9 +31,9 @@ class LoginPage extends StatelessWidget {
                     listener: (context, state) {
                       if (state is LoginSuccessState) {
                         if (state.role == 'doctor') {
-                          Navigator.pushNamed(context, '/doctor');
+                          context.go('/doctor');
                         } else if (state.role == 'patient') {
-                          Navigator.pushNamed(context, '/patient');
+                          context.go('/patient');
                         }
                       } else if (state is LoginErrorState) {
                         ScaffoldMessenger.of(context).showSnackBar(
@@ -93,32 +95,19 @@ class LoginPage extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Row(
-                                        children: [
-                                          Checkbox(
-                                            value: true,
-                                            onChanged: (value) {},
-                                          ),
-                                          const Text(
-                                            'Remember me',
-                                            style: TextStyle(
-                                              color: Colors.black87,
-                                            ),
-                                          ),
-                                        ],
+                                      Checkbox(
+                                        value: true,
+                                        onChanged: (value) {},
                                       ),
-                                      MouseRegion(
-                                        cursor: SystemMouseCursors.click,
-                                        child: GestureDetector(
-                                          onTap: () {},
-                                          child: const Text(
-                                            'Forgot Password?',
-                                            style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 4, 48, 116),
-                                              decoration:
-                                                  TextDecoration.underline,
-                                            ),
+                                      const Text('Remember Me'),
+                                      const Spacer(),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: const Text(
+                                          'Forgot Password?',
+                                          style: TextStyle(
+                                            decoration:
+                                                TextDecoration.underline,
                                           ),
                                         ),
                                       ),
@@ -132,10 +121,6 @@ class LoginPage extends StatelessWidget {
                                               emailController.text,
                                               passwordController.text));
                                     },
-                                    child: const Text(
-                                      'Login',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.blue[900],
                                       shape: RoundedRectangleBorder(
@@ -143,12 +128,29 @@ class LoginPage extends StatelessWidget {
                                       ),
                                       minimumSize: const Size(150, 50),
                                     ),
+                                    child: const Text(
+                                      'Login',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
                                   ),
                                   const SizedBox(height: 16),
-                                  const AuthLink(
-                                    leadingText: 'Not on Sapdos? ',
-                                    linkText: 'Sign up',
-                                    routeName: '/signup',
+                                  Text.rich(
+                                    TextSpan(
+                                      text: 'Don\'t have an account? ',
+                                      children: [
+                                        TextSpan(
+                                          text: 'Sign Up',
+                                          style: const TextStyle(
+                                            decoration:
+                                                TextDecoration.underline,
+                                          ),
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () {
+                                              context.go('/signup');
+                                            },
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
