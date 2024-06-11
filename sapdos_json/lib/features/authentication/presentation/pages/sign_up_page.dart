@@ -31,7 +31,7 @@ class SignUpPage extends StatelessWidget {
                   child: BlocListener<SignUpBloc, SignUpState>(
                     listener: (context, state) {
                       if (state is SignUpSuccessState) {
-                        context.go('/login');
+                        context.go('/patient');
                       } else if (state is SignUpErrorState) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text(state.errorMessage)),

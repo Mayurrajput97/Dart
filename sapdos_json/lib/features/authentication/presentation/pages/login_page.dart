@@ -8,6 +8,8 @@ import 'package:practice_work/features/authentication/presentation/bloc/login/lo
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_event.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_state.dart';
 
+import '../../data/repository/user_repo.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -26,7 +28,8 @@ class LoginPage extends StatelessWidget {
                 color: Colors.white,
                 padding: const EdgeInsets.all(32.0),
                 child: BlocProvider(
-                  create: (context) => LoginBloc(),
+                  create: (context) =>
+                      LoginBloc(userRepository: context.read<UserRepository>()),
                   child: BlocListener<LoginBloc, LoginState>(
                     listener: (context, state) {
                       if (state is LoginSuccessState) {
