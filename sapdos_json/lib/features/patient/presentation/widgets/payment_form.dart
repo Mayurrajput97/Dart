@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../bloc/payment_bloc/payment_bloc.dart';
-import '../../bloc/payment_bloc/payment_event.dart';
+import '../bloc/payment_bloc/payment_bloc.dart';
+import '../bloc/payment_bloc/payment_event.dart';
 
 class PaymentForm extends StatelessWidget {
   final String paymentMethod;

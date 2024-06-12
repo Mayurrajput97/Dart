@@ -5,7 +5,7 @@ import 'package:practice_work/features/widgets_comman/left_image_section.dart';
 import '../bloc/payment_bloc/payment_bloc.dart';
 import '../bloc/payment_bloc/payment_event.dart';
 import '../bloc/payment_bloc/payment_state.dart';
-import '../widgets/payment_page_widgets/payment_form.dart';
+import '../widgets/payment_form.dart';
 
 class PaymentPage extends StatelessWidget {
   const PaymentPage({super.key});

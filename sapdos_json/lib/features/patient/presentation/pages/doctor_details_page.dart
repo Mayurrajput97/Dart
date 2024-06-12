@@ -29,9 +29,6 @@ class _DoctorDetailPageState extends State<DoctorDetailPage> {
     final descriptionFontSize = isSmallScreen ? 14.0 : 18.0;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Doctor Details'),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:go_router/go_router.dart';
 import 'package:practice_work/features/patient/data/model/doctor_model.dart';
-import 'package:practice_work/features/patient/presentation/pages/doctor_details_page.dart';
 
 class DoctorTile extends StatelessWidget {
   final Doctor doctor;
@@ -22,12 +23,7 @@ class DoctorTile extends StatelessWidget {
 
         return InkWell(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => DoctorDetailPage(doctor: doctor),
-              ),
-            );
+            context.push('/doctor/${doctor.name}', extra: doctor);
           },
           child: Card(
             elevation: 4,
