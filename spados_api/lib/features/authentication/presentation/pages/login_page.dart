@@ -8,7 +8,7 @@ import 'package:practice_work/features/authentication/presentation/bloc/login/lo
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_event.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_state.dart';
 
-import '../../data/repository/user_repo.dart';
+import '../../domain/repository/user_repo.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

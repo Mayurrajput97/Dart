@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import '../model/user_model.dart';
+import '../../data/model/user_model.dart';
 
 class UserRepository {
   Future<List<UserModel>> fetchUsers() async {
@@ -10,3 +10,7 @@ class UserRepository {
     return data.map((json) => UserModel.fromJson(json)).toList();
   }
 }
+
+// abstract class AuthenticationRepository {
+//   Future<DataState<List< User>>> fetchUsers();
+// }

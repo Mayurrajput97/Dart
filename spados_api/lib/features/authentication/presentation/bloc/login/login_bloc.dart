@@ -2,7 +2,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_event.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_state.dart';
-import 'package:practice_work/features/authentication/data/repository/user_repo.dart';
+import 'package:practice_work/features/authentication/domain/repository/user_repo.dart';
 
 import '../../../data/model/user_model.dart';
 
