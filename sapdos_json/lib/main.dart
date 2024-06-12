@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/initial/initial_bloc.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/login/login_bloc.dart';
-import 'package:practice_work/routes.dart';
+import 'package:practice_work/config/routes/routes.dart';
 import 'features/authentication/data/repository/user_repo.dart';
 
 void main() {

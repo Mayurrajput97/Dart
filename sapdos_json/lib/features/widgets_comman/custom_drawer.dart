@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice_work/theme/colors.dart';
+import 'package:practice_work/config/theme/colors.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);

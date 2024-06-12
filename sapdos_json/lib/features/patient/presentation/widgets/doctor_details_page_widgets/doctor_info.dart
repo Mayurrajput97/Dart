@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice_work/features/patient/data/model/doctor_model.dart';
-import 'package:practice_work/theme/colors.dart';
+import 'package:practice_work/config/theme/colors.dart';
 
 class DoctorInfo extends StatelessWidget {
   final Doctor doctor;
