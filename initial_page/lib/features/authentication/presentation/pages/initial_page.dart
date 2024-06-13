@@ -6,7 +6,7 @@ class InitialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Initial Page'),
+        title: const Text('Initial Page'),
       ),
       body: Center(
         child: Column(
@@ -16,13 +16,13 @@ class InitialPage extends StatelessWidget {
               onPressed: () {
                 context.go('/login');
               },
-              child: Text('Login'),
+              child: const Text('Login'),
             ),
             ElevatedButton(
               onPressed: () {
                 context.go('/signup');
               },
-              child: Text('Sign Up'),
+              child: const Text('Sign Up'),
             ),
           ],
         ),

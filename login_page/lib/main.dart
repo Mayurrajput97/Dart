@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,8 +23,8 @@ class MyApp extends StatelessWidget {
                     "Images/ig.png",
                     width: 200,
                   ),
-                  Padding(padding: EdgeInsets.only(top: 30)),
-                  SizedBox(
+                  const Padding(padding: EdgeInsets.only(top: 30)),
+                  const SizedBox(
                     height: 45,
                     width: 400,
                     child: TextField(
@@ -42,8 +41,8 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
-                  SizedBox(
+                  const SizedBox(height: 10),
+                  const SizedBox(
                     height: 45,
                     width: 400,
                     child: TextField(
@@ -60,25 +59,25 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   SizedBox(
                     width: 400,
                     height: 40,
                     child: ElevatedButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'Log In',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
                         )),
                   ),
-                  SizedBox(height: 20),
-                  Divider(
+                  const SizedBox(height: 20),
+                  const Divider(
                     height: 10.0,
                     color: Colors.grey,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -86,27 +85,27 @@ class MyApp extends StatelessWidget {
                         'images/fb.png',
                         width: 30,
                       ),
-                      SizedBox(width: 10),
-                      Text(
+                      const SizedBox(width: 10),
+                      const Text(
                         'Login With FaceBook',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.blue),
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Align(
                     alignment: Alignment.center,
                     child: TextButton(
                       onPressed: () {},
-                      child: Text('Forgot Pass?'),
+                      child: const Text('Forgot Pass?'),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     height: 10.0,
                     color: Colors.grey,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -120,20 +119,20 @@ class MyApp extends StatelessWidget {
                         width: 80,
                         height: 30,
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                     ],
                   ),
-                  Text(
+                  const Text(
                     'Get App',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.blue),
                   ),
-                  Text(
+                  const Text(
                     'Get App',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.blue),
                   ),
-                  Text(
+                  const Text(
                     'Get App',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.blue),

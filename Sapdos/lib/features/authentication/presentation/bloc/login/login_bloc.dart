@@ -21,10 +21,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
       if (event.emailValue == 'centra@gmail.com' &&
           event.passwordValue == 'centra') {
-        emit(LoginSuccessState(role: 'doctor'));
+        emit(const LoginSuccessState(role: 'doctor'));
       } else if (event.emailValue == 'mayur@gmail.com' &&
           event.passwordValue == 'mayur') {
-        emit(LoginSuccessState(role: 'patient'));
+        emit(const LoginSuccessState(role: 'patient'));
       } else {
         emit(const LoginErrorState("Invalid login credentials"));
       }

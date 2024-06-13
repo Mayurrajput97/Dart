@@ -19,27 +19,27 @@ class HeaderSection extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.bold,
-            color: const Color.fromARGB(213, 4, 49, 116),
+            color: Color.fromARGB(213, 4, 49, 116),
           ),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         Text(
           subtitle,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w500,
-            color: const Color.fromARGB(255, 4, 48, 116),
+            color: Color.fromARGB(255, 4, 48, 116),
           ),
         ),
-        SizedBox(height: 6),
+        const SizedBox(height: 6),
         Text(
           description,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
-            color: const Color.fromARGB(161, 0, 0, 0),
+            color: Color.fromARGB(161, 0, 0, 0),
           ),
         ),
       ],

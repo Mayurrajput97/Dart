@@ -1,5 +1,3 @@
-import 'package:practice_work/features/authentication/domain/entities/user_entity.dart';
-
 class UserModel {
   final String email;
   final String password;
