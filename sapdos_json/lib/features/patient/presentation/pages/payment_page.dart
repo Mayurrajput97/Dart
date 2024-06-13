@@ -162,12 +162,6 @@ class PaymentPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: const Text(
-                    'Okay',
-                    style: TextStyle(
-                      color: Color(0xFF13235a),
-                    ),
-                  ),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 40, vertical: 20),
@@ -175,6 +169,12 @@ class PaymentPage extends StatelessWidget {
                     textStyle: const TextStyle(fontSize: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Okay',
+                    style: TextStyle(
+                      color: Color(0xFF13235a),
                     ),
                   ),
                 ),

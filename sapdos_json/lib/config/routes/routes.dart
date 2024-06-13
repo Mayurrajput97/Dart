@@ -36,5 +36,10 @@ final GoRouter router = GoRouter(
         return DoctorDetailPage(doctor: doctor);
       },
     ),
+    // ------------------------->  TO - DO :
+    //  GoRoute(
+    //   path: '/payment',
+    //   builder: (context, state) => const PaymentPage(),
+    // ),
   ],
 );

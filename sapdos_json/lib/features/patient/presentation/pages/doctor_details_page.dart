@@ -58,8 +58,11 @@ class _DoctorDetailPageState extends State<DoctorDetailPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const PaymentPage()),
+                    MaterialPageRoute(
+                        builder: (context) => const PaymentPage()),
                   );
+                  // TO - Do :------------------ >
+                  //     context.go('/payment');
                 },
               ),
             ],
