@@ -9,7 +9,11 @@ import 'package:retrofit_api_calling/features/posts/presentation/blocs/post_bloc
 final sl = GetIt.instance;
 
 void init() {
+  // ---> Creating a new instance of postbloc , each time when it requested
+
   sl.registerFactory(() => PostBloc(getPosts: sl()));
+
+  // ---> Ensuring that a single instance  is created and shared.
 
   sl.registerLazySingleton(() => GetPosts(sl()));
 

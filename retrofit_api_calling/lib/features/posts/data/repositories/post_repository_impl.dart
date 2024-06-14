@@ -15,5 +15,6 @@ class PostRepositoryImpl implements PostRepository {
         .map((postModel) => Post(
             id: postModel.id, title: postModel.title, body: postModel.body))
         .toList();
+    // -->   taking  the list of PostModel objects returned  maps them to a list of Post entities and calling getPosts
   }
 }

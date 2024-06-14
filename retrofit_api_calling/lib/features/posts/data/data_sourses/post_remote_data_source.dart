@@ -18,5 +18,6 @@ class PostRemoteDataSource {
     } else {
       throw Exception('Failed to load posts');
     }
+    // --- > #17 converts each JSON object into a PostModel instance.
   }
 }
