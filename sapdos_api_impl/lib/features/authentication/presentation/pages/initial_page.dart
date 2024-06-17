@@ -5,7 +5,7 @@ import 'package:practice_work/features/authentication/presentation/bloc/initial/
 import 'package:practice_work/features/authentication/presentation/bloc/initial/initial_event.dart';
 import 'package:practice_work/features/authentication/presentation/bloc/initial/initial_state.dart';
 import 'package:practice_work/features/authentication/presentation/widgets/header_section.dart';
-import 'package:practice_work/features/widgets_comman/left_image_section.dart';
+import 'package:practice_work/utils/widgets_comman/left_image_section.dart';
 
 class InitialPage extends StatelessWidget {
   const InitialPage({super.key});

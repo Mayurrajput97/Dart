@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice_work/features/authentication/presentation/widgets/header_section.dart';
-import 'package:practice_work/features/widgets_comman/left_image_section.dart';
+import 'package:practice_work/utils/widgets_comman/left_image_section.dart';
 import '../bloc/payment_bloc/payment_bloc.dart';
 import '../bloc/payment_bloc/payment_event.dart';
 import '../bloc/payment_bloc/payment_state.dart';

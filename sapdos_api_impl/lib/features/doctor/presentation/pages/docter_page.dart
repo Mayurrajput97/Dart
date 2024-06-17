@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_work/features/doctor/presentation/widgets/appointment_card.dart';
 import 'package:practice_work/features/doctor/presentation/widgets/appointment_tiles.dart';
-import 'package:practice_work/features/widgets_comman/custom_drawer.dart';
+import 'package:practice_work/utils/widgets_comman/custom_drawer.dart';
 import 'package:practice_work/config/theme/colors.dart';
 
 class DoctorPage extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice_work/features/widgets_comman/custom_drawer.dart';
+import 'package:practice_work/utils/widgets_comman/custom_drawer.dart';
 import 'package:practice_work/features/patient/data/respository/doctor_repository.dart';
 import 'package:practice_work/features/patient/presentation/bloc/patient_bloc/patient_bloc.dart';
 import 'package:practice_work/features/patient/presentation/bloc/patient_bloc/patient_event.dart';
