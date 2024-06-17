@@ -1,0 +1,18 @@
+[
+    {
+      "email": "centra@gmail.com",
+      "password": "centra",
+      "role": "doctor"
+    },
+    {
+      "email": "mayur@gmail.com",
+      "password": "mayur",
+      "role": "patient"
+    },
+    {
+      "email": "pavan@gmail.com",
+      "password": "pavan",
+      "role": "patient"
+    }
+  ]
+  
