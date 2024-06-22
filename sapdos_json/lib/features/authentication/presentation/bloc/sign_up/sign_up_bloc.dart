@@ -5,6 +5,7 @@ import 'package:practice_work/features/authentication/presentation/bloc/sign_up/
 
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   SignUpBloc() : super(SignUpInitialState()) {
+    // Event handler for email, password
     on<SignUpTextChangedEvent>((event, emit) {
       if (!EmailValidator.validate(event.email)) {
         emit(SignUpErrorState(
@@ -21,6 +22,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       }
     });
 
+    // Event handler for submission of sign-up credentials.
     on<SignUpSubmittedEvent>((event, emit) async {
       emit(SignUpLoadingState());
       await Future.delayed(const Duration(seconds: 4));

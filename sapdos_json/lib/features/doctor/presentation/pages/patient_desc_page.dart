@@ -120,6 +120,7 @@ class _PatientDescriptionPageState extends State<PatientDescriptionPage> {
                     color: Colors.white,
                   ),
                   onTap: () {
+                    // TO : DO : Have To Implement this Using Bloc
                     setState(() {
                       showHistoryDetails = !showHistoryDetails;
                     });

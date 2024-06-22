@@ -10,6 +10,7 @@ import 'package:practice_work/features/authentication/presentation/bloc/login/lo
 
 import '../../data/repository/user_repo.dart';
 
+/// Users can log in and they are navigated to perticular page on role
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -32,6 +33,7 @@ class LoginPage extends StatelessWidget {
                       LoginBloc(userRepository: context.read<UserRepository>()),
                   child: BlocListener<LoginBloc, LoginState>(
                     listener: (context, state) {
+                      // Navigates upon the current login state
                       if (state is LoginSuccessState) {
                         if (state.role == 'doctor') {
                           context.go('/doctor');
@@ -51,6 +53,7 @@ class LoginPage extends StatelessWidget {
                               child: CircularProgressIndicator());
                         }
 
+                        // Build login form
                         return Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,

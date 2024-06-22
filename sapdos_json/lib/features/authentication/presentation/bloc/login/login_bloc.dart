@@ -9,6 +9,7 @@ import '../../../data/model/user_model.dart';
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final UserRepository userRepository;
 
+  /// Constructs a [LoginBloc] with [userRepository] DI.
   LoginBloc({required this.userRepository}) : super(LoginInitialState()) {
     on<LoginTextChangedEvent>((event, emit) {
       if (!EmailValidator.validate(event.email)) {

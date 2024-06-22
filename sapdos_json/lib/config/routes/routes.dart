@@ -29,17 +29,16 @@ final GoRouter router = GoRouter(
       path: '/patient',
       builder: (context, state) => PatientPage(),
     ),
+
+    /// The Route For DoctorDetailPage Expects a [Doctor] object to be passed as an extra in the state.
+    ///
     GoRoute(
+      /// This allows to navigate to different doctor detail pages based on the doctor's ID.
       path: '/doctor/:id',
       builder: (context, state) {
         final doctor = state.extra as Doctor;
         return DoctorDetailPage(doctor: doctor);
       },
     ),
-    // ------------------------->  TO - DO :
-    //  GoRoute(
-    //   path: '/payment',
-    //   builder: (context, state) => const PaymentPage(),
-    // ),
   ],
 );

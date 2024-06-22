@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Dr. Jane Smith",
+    "specialization": "Neurologist",
+    "rating": 3,
+    "image": "https://media.istockphoto.com/id/1222943575/photo/medical-concept-of-asian-beautiful-female-doctor-in-white-coat-with-stethoscope-waist-up.jpg?s=1024x1024&w=is&k=20&c=ojpTaTzXA2OW-7NhJjWe-FwlpsvHVP-QI7k6eq6ls7M=",
+    "description": "Dr. Jane Smith is a board-certified neurologist with over 15 years of experience.",
+    "availableSlots": ["10:00 AM", "11:00 AM", "02:00 PM", "03:00 PM"],
+    "education": ["BDS", "DDS"]
+  },
+  {
+    "name": "Dr. Eren Yegar",
+    "specialization": "Dermatologist",
+    "rating": 4.5,
+    "image": "https://media.istockphoto.com/id/1425798970/photo/beautiful-caucasian-female-doctor-smiles-cheerfully-at-the-camera.jpg?s=1024x1024&w=is&k=20&c=l5kT0Bmyzi-iPSW3f9dpoSkY0ZGZukbxRlOQV-b19PQ=",
+    "description": "Dr. Eren Yegar specializes in dermatology with a focus on skin health and cosmetic treatments.",
+    "availableSlots": ["09:00 AM", "11:30 AM", "01:00 PM", "04:00 PM"],
+    "education": ["MBBS"]
+  },
+  {
+    "name": "Dr. Bob Brown",
+    "specialization": "Pediatrician",
+    "rating": 5,
+    "image": "https://media.istockphoto.com/id/1204395138/photo/smiling-doctor-with-strethoscope-isolated-on-grey.jpg?s=1024x1024&w=is&k=20&c=IXvIgmTFJuNrawFI1wmLEC9DsRH0_C8ukdyegrRsq84=",
+    "description": "Dr. Bob Brown is a highly recommended pediatrician known for his gentle approach with children.",
+    "availableSlots": ["10:30 AM", "12:00 PM", "03:30 PM", "05:00 PM"],
+    "education": ["DMD"]
+  },
+  {
+    "name": "Dr. Charlie White",
+    "specialization": "Orthopedic",
+    "rating": 4.4,
+    "image": "https://media.istockphoto.com/id/1224728100/photo/serious-doctor-on-light-green.jpg?s=1024x1024&w=is&k=20&c=p2Z2zIfeE2pbFbHFpUvZaN25CLx0pYm9k9vrfHC26G0=",
+    "description": "Dr. Charlie White has extensive experience in treating musculoskeletal injuries and disorders.",
+    "availableSlots": ["09:30 AM", "12:30 PM", "02:30 PM", "04:30 PM"],
+    "education": ["MS"]
+  },
+  {
+    "name": "Dr. Ruth B",
+    "specialization": "Orthopedic",
+    "rating": 2,
+    "image": "https://media.istockphoto.com/id/1938555082/photo/doctor-working-at-a-laboratory-and-holding-a-medical-chart.jpg?s=1024x1024&w=is&k=20&c=z9QLjK1yYgchvs1mPc3EV8Pn8EcQvL8toJgUFBxC3y8=",
+    "description": "Dr. Ruth B is an orthopedic specialist focusing on joint replacement and sports injuries.",
+    "availableSlots": ["10:00 AM", "01:00 PM", "03:00 PM", "05:00 PM"],
+    "education": ["BDS", "DDS"]
+  },
+  {
+    "name": "Dr. Reinar",
+    "specialization": "Orthopedic",
+    "rating": 3.5,
+    "image": "https://media.istockphoto.com/id/1227538708/photo/the-scientific-world-is-about-pushing-developments.jpg?s=1024x1024&w=is&k=20&c=MglTyV2YfOCd4rMz212ZW8XoG0MHh5VWYXSwFEEGW58=",
+    "description": "Dr. Reinar is an expert in orthopedic surgery with a passion for patient care and recovery.",
+    "availableSlots": ["08:30 AM", "11:30 AM", "02:30 PM", "04:30 PM"],
+    "education": ["BDS", "DDS"]
+  }
+]

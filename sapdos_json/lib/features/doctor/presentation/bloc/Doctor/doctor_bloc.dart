@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:practice_work/features/doctor/domain/entities/appointment.dart';
-import 'package:practice_work/features/doctor/presentation/bloc/doctor_event.dart';
-import 'package:practice_work/features/doctor/presentation/bloc/doctor_state.dart';
+import 'package:practice_work/features/doctor/presentation/bloc/Doctor/doctor_event.dart';
+import 'package:practice_work/features/doctor/presentation/bloc/Doctor/doctor_state.dart';
 
 class DoctorBloc extends Bloc<DoctorEvent, DoctorState> {
   DoctorBloc() : super(DoctorInitial()) {
